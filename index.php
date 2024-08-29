@@ -1,3 +1,13 @@
 <?php
+/**
+ * Main template file.
+ *
+ * @package Zuxtheme
+ */
 
-echo "Hello";
+get_header();
+
+
+
+get_footer();
+

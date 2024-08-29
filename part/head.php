@@ -1,3 +1,10 @@
+<?php
+/**
+ * Header template
+ *
+ * @package Zuxtheme
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +15,5 @@
      ?>
 </head>
 <body>
-    
-</body>
-</html>
+ 
+<header></header>
