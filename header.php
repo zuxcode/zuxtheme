@@ -14,9 +14,11 @@
 
 	<?php do_action( 'zuxtheme_site_before' ); ?>
 
-	<div id="page" class="flex min-h-screen flex-col">
+	<div id="page" class="relative flex min-h-svh flex-col">
 
-		<div class="bg-red">
+		<div class="hero-bg-effect-circle absolute bottom-0 left-1/2 z-20 translate-x-[-50%] rounded-full"></div>
+
+		<div class="hero-section h-svh">
 			<?php do_action( 'zuxtheme_header' ); ?>
 
 			<header>
@@ -70,32 +72,49 @@
 					</div>
 				</nav>
 
-				
+
 			</header>
 
 			<div id="content" class="site-content flex-grow">
 				<?php if ( is_front_page() ) { ?>
-					<!-- Start introduction -->
+					<div class="container mx-auto flex">
+						<div class="w-2/4">
+							<div class="flex h-full flex-col place-content-center">
+								<h1 class="mb-6 text-3xl font-extrabold tracking-tight text-white lg:text-6xl">Transform
+									Your
+									<span class="text-secondary">
+										Brand
+									</span> with <span class="text-secondary">Precision & Impact</span>
+								</h1>
 
-					<div class="container mx-auto">
-						<div
-							class="my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90% px-12 py-16">
-							<div class="mx-auto max-w-screen-md">
-								<h1 class="mb-6 text-3xl font-extrabold tracking-tight text-gray-800 lg:text-6xl">Start
-									building
-									your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a>
-									flavoured WordPress theme
-									with <a href="https://tailpress.io" class="text-primary">TailPress</a>.</h1>
-								<p class="mb-10 text-xl font-medium text-gray-600">TailPress is your go-to starting
-									point for developing WordPress themes with Tailwind CSS and comes with basic
-									block-editor
-									support out
-									of the box.</p>
-								<a href="https://github.com/jeffreyvr/tailpress"
-									class="w-full flex-none rounded-xl border border-transparent bg-gray-900 px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 focus:ring-offset-white sm:w-auto">View
-									on GitHub</a>
+								<p class="mb-10 text-xl font-medium text-white">At <strong>PHCI</strong>, we are a
+									performance-driven digital marketing and brand development company. Our mission is to
+									elevate
+									your business through innovative strategies, data-driven insights, and creative
+									solutions.
+								</p>
+								<button class="inline-flex items-start">
+									<a href="#services"
+										class="w-full flex-none rounded-xl border border-transparent bg-gray-900 px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 focus:ring-offset-white sm:w-auto">Explore
+										Our Services
+									</a>
+								</button>
 							</div>
 						</div>
+
+						<div class="flex w-2/4 justify-end">
+							<div class="block h-auto w-[85%]">
+								<?php
+								$temp_dir = get_template_directory();
+								$svg_file = $temp_dir . '/resources/assets/svgs/Digital-lifestyle-pana.svg';
+
+								$svgContent = file_get_contents( $svg_file );
+
+								echo $svgContent;
+								?>
+							</div>
+						</div>
+
 					</div>
 					<!-- End introduction -->
 				<?php } ?>

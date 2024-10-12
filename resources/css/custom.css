@@ -1,46 +1,80 @@
 article > *:not(.entry-content),
 .entry-content > * {
-    @apply mx-auto max-w-content;
+  @apply mx-auto max-w-content;
 }
 
-.entry-content, .block-editor-block-list__layout {
-    h1 {
-        @apply text-2xl;
+.entry-content,
+.block-editor-block-list__layout {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p,
+  ul,
+  ol {
+    a {
+      @apply text-blue-500 underline;
+
+      &:hover {
+        @apply no-underline;
+      }
     }
 
-    h2 {
-        @apply text-xl;
+    @apply mb-8;
+  }
+
+  ul:not(.block-editor-block-variation-picker__variations) {
+    li {
+      @apply list-inside list-disc;
     }
+  }
 
-    h3 {
-        @apply text-lg;
+  ol {
+    li {
+      @apply list-inside list-decimal;
     }
-
-    p, ul, ol {
-        a {
-            @apply text-blue-500 underline;
-
-            &:hover {
-                @apply no-underline;
-            }
-        }
-
-        @apply mb-8;
-    }
-
-    ul:not(.block-editor-block-variation-picker__variations) {
-        li {
-            @apply list-inside list-disc;
-        }
-    }
-
-    ol {
-        li {
-            @apply list-inside list-decimal;
-        }
-    }
+  }
 }
 
 :root {
-    --background: 0
+  /* --background: 0 */
+}
+
+.hero-section {
+  --_mesh-gradient-blur: 0px;
+  --_mesh-gradient-blend-mode: normal;
+
+  background: radial-gradient(at 14% 97%, #c11ceb 0px, transparent 50%),
+    radial-gradient(at 58% 89%, #6f19b5 0px, transparent 50%),
+    radial-gradient(at 79% 72%, #25007a 0px, transparent 50%) #000000;
+  mix-blend-mode: var(--_mesh-gradient-blend-mode);
+  filter: blur(var(--_mesh-gradient-blur));
+}
+
+.hero-bg-effect-circle {
+  width: 450px;
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
+  filter: blur(120px);
+}
+
+.hero-bg-effect-red{
+ background: #fe624d;   
+ border: 2px solid #ee5e4b;
+}
+.hero-bg-effect-yellow{
+ background: #ffc432;   
+ border: 2px solid #f2bd3a;
+}
+.hero-bg-effect-green{
+ background: #5bde47;   
+ border: 2px solid #5fc651;
 }
